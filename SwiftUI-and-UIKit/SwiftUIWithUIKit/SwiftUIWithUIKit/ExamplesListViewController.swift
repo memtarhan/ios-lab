@@ -13,7 +13,11 @@ private struct MenuItem {
     var subtitle: String
     var viewControllerProvider: () -> UIViewController
 
-    static let allExamples: [MenuItem] = []
+    static let allExamples: [MenuItem] = [
+        MenuItem(title: "SwiftUI View Controllers",
+                 subtitle: "Using UIHostingController",
+                 viewControllerProvider: { HostingControllerViewController() }),
+    ]
 }
 
 class ExamplesListViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {

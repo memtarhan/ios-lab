@@ -13,6 +13,7 @@
 		439FEE2E29D8E81F003D64C0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 439FEE2C29D8E81F003D64C0 /* Main.storyboard */; };
 		439FEE3029D8E820003D64C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 439FEE2F29D8E820003D64C0 /* Assets.xcassets */; };
 		439FEE3329D8E820003D64C0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 439FEE3129D8E820003D64C0 /* LaunchScreen.storyboard */; };
+		439FEE3D29D8EB8B003D64C0 /* HostingControllerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439FEE3C29D8EB8B003D64C0 /* HostingControllerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		439FEE2F29D8E820003D64C0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		439FEE3229D8E820003D64C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		439FEE3429D8E820003D64C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		439FEE3C29D8EB8B003D64C0 /* HostingControllerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostingControllerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 		439FEE2529D8E81F003D64C0 /* SwiftUIWithUIKit */ = {
 			isa = PBXGroup;
 			children = (
+				439FEE3A29D8EB55003D64C0 /* Examples */,
 				439FEE2629D8E81F003D64C0 /* AppDelegate.swift */,
 				439FEE2829D8E81F003D64C0 /* SceneDelegate.swift */,
 				439FEE2A29D8E81F003D64C0 /* ExamplesListViewController.swift */,
@@ -65,6 +68,22 @@
 				439FEE3429D8E820003D64C0 /* Info.plist */,
 			);
 			path = SwiftUIWithUIKit;
+			sourceTree = "<group>";
+		};
+		439FEE3A29D8EB55003D64C0 /* Examples */ = {
+			isa = PBXGroup;
+			children = (
+				439FEE3B29D8EB5F003D64C0 /* SwiftUI View Controllers */,
+			);
+			path = Examples;
+			sourceTree = "<group>";
+		};
+		439FEE3B29D8EB5F003D64C0 /* SwiftUI View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				439FEE3C29D8EB8B003D64C0 /* HostingControllerViewController.swift */,
+			);
+			path = "SwiftUI View Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,6 +160,7 @@
 				439FEE2B29D8E81F003D64C0 /* ExamplesListViewController.swift in Sources */,
 				439FEE2729D8E81F003D64C0 /* AppDelegate.swift in Sources */,
 				439FEE2929D8E81F003D64C0 /* SceneDelegate.swift in Sources */,
+				439FEE3D29D8EB8B003D64C0 /* HostingControllerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
