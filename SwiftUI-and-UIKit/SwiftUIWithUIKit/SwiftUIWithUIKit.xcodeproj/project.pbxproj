@@ -14,6 +14,11 @@
 		439FEE3029D8E820003D64C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 439FEE2F29D8E820003D64C0 /* Assets.xcassets */; };
 		439FEE3329D8E820003D64C0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 439FEE3129D8E820003D64C0 /* LaunchScreen.storyboard */; };
 		439FEE3D29D8EB8B003D64C0 /* HostingControllerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439FEE3C29D8EB8B003D64C0 /* HostingControllerViewController.swift */; };
+		439FEE4129D8F0B7003D64C0 /* HeartRateTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439FEE4029D8F0B7003D64C0 /* HeartRateTitleView.swift */; };
+		439FEE4329D8F0F7003D64C0 /* HealthCategoryCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439FEE4229D8F0F7003D64C0 /* HealthCategoryCellView.swift */; };
+		439FEE4529D8F114003D64C0 /* SleepCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439FEE4429D8F114003D64C0 /* SleepCellView.swift */; };
+		439FEE4729D8F133003D64C0 /* StepCountCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439FEE4629D8F133003D64C0 /* StepCountCellView.swift */; };
+		439FEE4929D8F158003D64C0 /* HostingConfigurationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439FEE4829D8F158003D64C0 /* HostingConfigurationViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +31,11 @@
 		439FEE3229D8E820003D64C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		439FEE3429D8E820003D64C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		439FEE3C29D8EB8B003D64C0 /* HostingControllerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostingControllerViewController.swift; sourceTree = "<group>"; };
+		439FEE4029D8F0B7003D64C0 /* HeartRateTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartRateTitleView.swift; sourceTree = "<group>"; };
+		439FEE4229D8F0F7003D64C0 /* HealthCategoryCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthCategoryCellView.swift; sourceTree = "<group>"; };
+		439FEE4429D8F114003D64C0 /* SleepCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SleepCellView.swift; sourceTree = "<group>"; };
+		439FEE4629D8F133003D64C0 /* StepCountCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepCountCellView.swift; sourceTree = "<group>"; };
+		439FEE4829D8F158003D64C0 /* HostingConfigurationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostingConfigurationViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +83,7 @@
 		439FEE3A29D8EB55003D64C0 /* Examples */ = {
 			isa = PBXGroup;
 			children = (
+				439FEE3E29D8F0A5003D64C0 /* SwiftUI in Cells */,
 				439FEE3B29D8EB5F003D64C0 /* SwiftUI View Controllers */,
 			);
 			path = Examples;
@@ -84,6 +95,26 @@
 				439FEE3C29D8EB8B003D64C0 /* HostingControllerViewController.swift */,
 			);
 			path = "SwiftUI View Controllers";
+			sourceTree = "<group>";
+		};
+		439FEE3E29D8F0A5003D64C0 /* SwiftUI in Cells */ = {
+			isa = PBXGroup;
+			children = (
+				439FEE3F29D8F0AD003D64C0 /* Views */,
+				439FEE4829D8F158003D64C0 /* HostingConfigurationViewController.swift */,
+			);
+			path = "SwiftUI in Cells";
+			sourceTree = "<group>";
+		};
+		439FEE3F29D8F0AD003D64C0 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				439FEE4029D8F0B7003D64C0 /* HeartRateTitleView.swift */,
+				439FEE4229D8F0F7003D64C0 /* HealthCategoryCellView.swift */,
+				439FEE4429D8F114003D64C0 /* SleepCellView.swift */,
+				439FEE4629D8F133003D64C0 /* StepCountCellView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -158,6 +189,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				439FEE2B29D8E81F003D64C0 /* ExamplesListViewController.swift in Sources */,
+				439FEE4129D8F0B7003D64C0 /* HeartRateTitleView.swift in Sources */,
+				439FEE4729D8F133003D64C0 /* StepCountCellView.swift in Sources */,
+				439FEE4329D8F0F7003D64C0 /* HealthCategoryCellView.swift in Sources */,
+				439FEE4529D8F114003D64C0 /* SleepCellView.swift in Sources */,
+				439FEE4929D8F158003D64C0 /* HostingConfigurationViewController.swift in Sources */,
 				439FEE2729D8E81F003D64C0 /* AppDelegate.swift in Sources */,
 				439FEE2929D8E81F003D64C0 /* SceneDelegate.swift in Sources */,
 				439FEE3D29D8EB8B003D64C0 /* HostingControllerViewController.swift in Sources */,

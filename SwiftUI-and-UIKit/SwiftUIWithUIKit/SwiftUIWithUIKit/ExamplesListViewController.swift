@@ -17,6 +17,9 @@ private struct MenuItem {
         MenuItem(title: "SwiftUI View Controllers",
                  subtitle: "Using UIHostingController",
                  viewControllerProvider: { HostingControllerViewController() }),
+        MenuItem(title: "SwiftUI in Cells",
+                 subtitle: "Using UIHostingConfiguration",
+                 viewControllerProvider: { HostingConfigurationViewController() }),
     ]
 }
 
