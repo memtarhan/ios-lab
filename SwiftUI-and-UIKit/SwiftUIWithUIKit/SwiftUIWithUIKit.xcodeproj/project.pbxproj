@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4324750D29DAF6A300D6F8CF /* CalorieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4324750C29DAF6A300D6F8CF /* CalorieView.swift */; };
+		4324750F29DAF78E00D6F8CF /* CaloriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4324750E29DAF78E00D6F8CF /* CaloriesViewController.swift */; };
 		439FEE2729D8E81F003D64C0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439FEE2629D8E81F003D64C0 /* AppDelegate.swift */; };
 		439FEE2929D8E81F003D64C0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439FEE2829D8E81F003D64C0 /* SceneDelegate.swift */; };
 		439FEE2B29D8E81F003D64C0 /* ExamplesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439FEE2A29D8E81F003D64C0 /* ExamplesListViewController.swift */; };
@@ -22,6 +24,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4324750C29DAF6A300D6F8CF /* CalorieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalorieView.swift; sourceTree = "<group>"; };
+		4324750E29DAF78E00D6F8CF /* CaloriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaloriesViewController.swift; sourceTree = "<group>"; };
 		439FEE2329D8E81F003D64C0 /* SwiftUIWithUIKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIWithUIKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		439FEE2629D8E81F003D64C0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		439FEE2829D8E81F003D64C0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +53,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4324750B29DAF63700D6F8CF /* MyFit */ = {
+			isa = PBXGroup;
+			children = (
+				4324750C29DAF6A300D6F8CF /* CalorieView.swift */,
+				4324750E29DAF78E00D6F8CF /* CaloriesViewController.swift */,
+			);
+			path = MyFit;
+			sourceTree = "<group>";
+		};
 		439FEE1A29D8E81F003D64C0 = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +96,7 @@
 		439FEE3A29D8EB55003D64C0 /* Examples */ = {
 			isa = PBXGroup;
 			children = (
+				4324750B29DAF63700D6F8CF /* MyFit */,
 				439FEE3E29D8F0A5003D64C0 /* SwiftUI in Cells */,
 				439FEE3B29D8EB5F003D64C0 /* SwiftUI View Controllers */,
 			);
@@ -190,6 +204,7 @@
 			files = (
 				439FEE2B29D8E81F003D64C0 /* ExamplesListViewController.swift in Sources */,
 				439FEE4129D8F0B7003D64C0 /* HeartRateTitleView.swift in Sources */,
+				4324750D29DAF6A300D6F8CF /* CalorieView.swift in Sources */,
 				439FEE4729D8F133003D64C0 /* StepCountCellView.swift in Sources */,
 				439FEE4329D8F0F7003D64C0 /* HealthCategoryCellView.swift in Sources */,
 				439FEE4529D8F114003D64C0 /* SleepCellView.swift in Sources */,
@@ -197,6 +212,7 @@
 				439FEE2729D8E81F003D64C0 /* AppDelegate.swift in Sources */,
 				439FEE2929D8E81F003D64C0 /* SceneDelegate.swift in Sources */,
 				439FEE3D29D8EB8B003D64C0 /* HostingControllerViewController.swift in Sources */,
+				4324750F29DAF78E00D6F8CF /* CaloriesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -351,6 +367,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -379,6 +396,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

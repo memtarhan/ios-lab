@@ -20,6 +20,9 @@ private struct MenuItem {
         MenuItem(title: "SwiftUI in Cells",
                  subtitle: "Using UIHostingConfiguration",
                  viewControllerProvider: { HostingConfigurationViewController() }),
+        MenuItem(title: "Calories",
+                 subtitle: "See your calorie burns",
+                 viewControllerProvider: { CaloriesViewController() }),
     ]
 }
 
