@@ -12,7 +12,7 @@ import SwiftUI
  Adding Codable conformance makes it easier to move data between the structure and a data file.
  You’ll rely on the Decodable component of the Codable protocol later in this section to read data from file.
  */
-struct Landmark: Hashable, Codable {
+struct Landmark: Hashable, Codable, Identifiable {
     var id: Int
     var name: String
     var park: String
