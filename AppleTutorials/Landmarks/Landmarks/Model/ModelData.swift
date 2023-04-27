@@ -5,9 +5,13 @@
 //  Created by Mehmet Tarhan on 27/04/2023.
 //
 
+import Combine
 import Foundation
 
-var landmarks: [Landmark] = load("landmarkData.json")
+// SwiftUI subscribes to your observable object, and updates any views that need refreshing when the data changes.
+final class ModelData: ObservableObject {
+    @Published var landmarks: [Landmark] = load("landmarkData.json")
+}
 
 func load<T: Decodable>(_ filename: String) -> T {
     let data: Data
