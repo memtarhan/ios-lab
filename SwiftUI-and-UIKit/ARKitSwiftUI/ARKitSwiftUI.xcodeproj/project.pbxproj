@@ -1,0 +1,362 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		436E6B5429FD6BE4007C6F7A /* ARKitSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436E6B5329FD6BE4007C6F7A /* ARKitSwiftUIApp.swift */; };
+		436E6B5629FD6BE4007C6F7A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436E6B5529FD6BE4007C6F7A /* ContentView.swift */; };
+		436E6B5829FD6BE5007C6F7A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 436E6B5729FD6BE5007C6F7A /* Assets.xcassets */; };
+		436E6B5B29FD6BE5007C6F7A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 436E6B5A29FD6BE5007C6F7A /* Preview Assets.xcassets */; };
+		436E6B6229FD6BFE007C6F7A /* ARViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436E6B6129FD6BFE007C6F7A /* ARViewController.swift */; };
+		436E6B6429FD6D45007C6F7A /* ARViewControllerRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436E6B6329FD6D45007C6F7A /* ARViewControllerRepresentable.swift */; };
+		436E6B6629FD6E73007C6F7A /* ARContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436E6B6529FD6E73007C6F7A /* ARContainerView.swift */; };
+		436E6B6829FD6EEE007C6F7A /* ARView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436E6B6729FD6EEE007C6F7A /* ARView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		436E6B5029FD6BE4007C6F7A /* ARKitSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ARKitSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		436E6B5329FD6BE4007C6F7A /* ARKitSwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARKitSwiftUIApp.swift; sourceTree = "<group>"; };
+		436E6B5529FD6BE4007C6F7A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		436E6B5729FD6BE5007C6F7A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		436E6B5A29FD6BE5007C6F7A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		436E6B6129FD6BFE007C6F7A /* ARViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewController.swift; sourceTree = "<group>"; };
+		436E6B6329FD6D45007C6F7A /* ARViewControllerRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewControllerRepresentable.swift; sourceTree = "<group>"; };
+		436E6B6529FD6E73007C6F7A /* ARContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARContainerView.swift; sourceTree = "<group>"; };
+		436E6B6729FD6EEE007C6F7A /* ARView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		436E6B4D29FD6BE4007C6F7A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		436E6B4729FD6BE4007C6F7A = {
+			isa = PBXGroup;
+			children = (
+				436E6B5229FD6BE4007C6F7A /* ARKitSwiftUI */,
+				436E6B5129FD6BE4007C6F7A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		436E6B5129FD6BE4007C6F7A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				436E6B5029FD6BE4007C6F7A /* ARKitSwiftUI.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		436E6B5229FD6BE4007C6F7A /* ARKitSwiftUI */ = {
+			isa = PBXGroup;
+			children = (
+				436E6B5329FD6BE4007C6F7A /* ARKitSwiftUIApp.swift */,
+				436E6B5529FD6BE4007C6F7A /* ContentView.swift */,
+				436E6B5729FD6BE5007C6F7A /* Assets.xcassets */,
+				436E6B5929FD6BE5007C6F7A /* Preview Content */,
+				436E6B6129FD6BFE007C6F7A /* ARViewController.swift */,
+				436E6B6329FD6D45007C6F7A /* ARViewControllerRepresentable.swift */,
+				436E6B6529FD6E73007C6F7A /* ARContainerView.swift */,
+				436E6B6729FD6EEE007C6F7A /* ARView.swift */,
+			);
+			path = ARKitSwiftUI;
+			sourceTree = "<group>";
+		};
+		436E6B5929FD6BE5007C6F7A /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				436E6B5A29FD6BE5007C6F7A /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		436E6B4F29FD6BE4007C6F7A /* ARKitSwiftUI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 436E6B5E29FD6BE5007C6F7A /* Build configuration list for PBXNativeTarget "ARKitSwiftUI" */;
+			buildPhases = (
+				436E6B4C29FD6BE4007C6F7A /* Sources */,
+				436E6B4D29FD6BE4007C6F7A /* Frameworks */,
+				436E6B4E29FD6BE4007C6F7A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ARKitSwiftUI;
+			productName = ARKitSwiftUI;
+			productReference = 436E6B5029FD6BE4007C6F7A /* ARKitSwiftUI.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		436E6B4829FD6BE4007C6F7A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1430;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					436E6B4F29FD6BE4007C6F7A = {
+						CreatedOnToolsVersion = 14.3;
+					};
+				};
+			};
+			buildConfigurationList = 436E6B4B29FD6BE4007C6F7A /* Build configuration list for PBXProject "ARKitSwiftUI" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 436E6B4729FD6BE4007C6F7A;
+			productRefGroup = 436E6B5129FD6BE4007C6F7A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				436E6B4F29FD6BE4007C6F7A /* ARKitSwiftUI */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		436E6B4E29FD6BE4007C6F7A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				436E6B5B29FD6BE5007C6F7A /* Preview Assets.xcassets in Resources */,
+				436E6B5829FD6BE5007C6F7A /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		436E6B4C29FD6BE4007C6F7A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				436E6B5629FD6BE4007C6F7A /* ContentView.swift in Sources */,
+				436E6B6629FD6E73007C6F7A /* ARContainerView.swift in Sources */,
+				436E6B5429FD6BE4007C6F7A /* ARKitSwiftUIApp.swift in Sources */,
+				436E6B6229FD6BFE007C6F7A /* ARViewController.swift in Sources */,
+				436E6B6429FD6D45007C6F7A /* ARViewControllerRepresentable.swift in Sources */,
+				436E6B6829FD6EEE007C6F7A /* ARView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		436E6B5C29FD6BE5007C6F7A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		436E6B5D29FD6BE5007C6F7A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		436E6B5F29FD6BE5007C6F7A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"ARKitSwiftUI/Preview Content\"";
+				DEVELOPMENT_TEAM = 2L9L899V66;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Need Camera";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.memtarhan.ARKitSwiftUI;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		436E6B6029FD6BE5007C6F7A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"ARKitSwiftUI/Preview Content\"";
+				DEVELOPMENT_TEAM = 2L9L899V66;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Need Camera";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.memtarhan.ARKitSwiftUI;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		436E6B4B29FD6BE4007C6F7A /* Build configuration list for PBXProject "ARKitSwiftUI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				436E6B5C29FD6BE5007C6F7A /* Debug */,
+				436E6B5D29FD6BE5007C6F7A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		436E6B5E29FD6BE5007C6F7A /* Build configuration list for PBXNativeTarget "ARKitSwiftUI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				436E6B5F29FD6BE5007C6F7A /* Debug */,
+				436E6B6029FD6BE5007C6F7A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 436E6B4829FD6BE4007C6F7A /* Project object */;
+}
