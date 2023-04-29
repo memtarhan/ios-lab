@@ -5,9 +5,9 @@
 //  Created by Mehmet Tarhan on 27/04/2023.
 //
 
+import CoreLocation
 import Foundation
 import SwiftUI
-import CoreLocation
 
 /*
  Adding Codable conformance makes it easier to move data between the structure and a data file.
@@ -21,6 +21,13 @@ struct Landmark: Hashable, Codable, Identifiable {
     var description: String
     var isFavorite: Bool
 
+    var category: Category
+    enum Category: String, CaseIterable, Codable {
+        case lakes = "Lakes"
+        case rivers = "Rivers"
+        case mountains = "Mountains"
+    }
+
     private var imageName: String
 
     var image: Image {
@@ -33,7 +40,7 @@ struct Landmark: Hashable, Codable, Identifiable {
         var latitude: Double
         var longitude: Double
     }
-    
+
     var locationCoordinate: CLLocationCoordinate2D {
         CLLocationCoordinate2D(latitude: coordinates.latitude, longitude: coordinates.longitude)
     }
