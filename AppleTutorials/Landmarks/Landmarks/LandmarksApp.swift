@@ -17,7 +17,7 @@ struct LandmarksApp: App {
 
     var body: some Scene {
         WindowGroup {
-            CategoryHome()
+            ContentView()
                 .environmentObject(modelData)
         }
     }

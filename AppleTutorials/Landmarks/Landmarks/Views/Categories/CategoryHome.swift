@@ -25,6 +25,7 @@ struct CategoryHome: View {
                 .listRowInsets(EdgeInsets())
             }
             .listStyle(.plain)
+            .scrollIndicators(.hidden)
             .navigationTitle("Featured")
         }
     }
