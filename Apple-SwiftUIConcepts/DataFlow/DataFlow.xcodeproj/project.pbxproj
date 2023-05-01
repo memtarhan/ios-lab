@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		433D6D1E29FFEF7A0080DD8D /* DataFlowApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433D6D1D29FFEF7A0080DD8D /* DataFlowApp.swift */; };
-		433D6D2029FFEF7A0080DD8D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433D6D1F29FFEF7A0080DD8D /* ContentView.swift */; };
 		433D6D2229FFEF7B0080DD8D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 433D6D2129FFEF7B0080DD8D /* Assets.xcassets */; };
 		433D6D2529FFEF7B0080DD8D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 433D6D2429FFEF7B0080DD8D /* Preview Assets.xcassets */; };
 		433D6D2E29FFEFF70080DD8D /* RecipeEditorConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433D6D2D29FFEFF70080DD8D /* RecipeEditorConfig.swift */; };
@@ -18,12 +17,49 @@
 		433D6D3829FFF1310080DD8D /* RecipeBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433D6D3729FFF1310080DD8D /* RecipeBox.swift */; };
 		433D6D3A29FFF1D60080DD8D /* RecipeEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433D6D3929FFF1D60080DD8D /* RecipeEditor.swift */; };
 		433D6D3C29FFF1EE0080DD8D /* RecipeEditorForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433D6D3B29FFF1EE0080DD8D /* RecipeEditorForm.swift */; };
+		433D6D3F29FFF3040080DD8D /* ContentListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433D6D3E29FFF3040080DD8D /* ContentListView.swift */; };
+		433D6D4129FFF31E0080DD8D /* RecipeListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433D6D4029FFF31E0080DD8D /* RecipeListView.swift */; };
+		433D6D4329FFF3410080DD8D /* RecipeListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433D6D4229FFF3410080DD8D /* RecipeListItemView.swift */; };
+		433D6D4529FFF3F80080DD8D /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433D6D4429FFF3F80080DD8D /* DetailView.swift */; };
+		433D6D4C29FFF4290080DD8D /* RecipeDirectionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433D6D4729FFF4290080DD8D /* RecipeDirectionsView.swift */; };
+		433D6D4D29FFF4290080DD8D /* RecipeDetailToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433D6D4829FFF4290080DD8D /* RecipeDetailToolbar.swift */; };
+		433D6D4E29FFF4290080DD8D /* RecipeIngredientsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433D6D4929FFF4290080DD8D /* RecipeIngredientsView.swift */; };
+		433D6D4F29FFF4290080DD8D /* RecipeNotSelectedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433D6D4A29FFF4290080DD8D /* RecipeNotSelectedView.swift */; };
+		433D6D5029FFF4290080DD8D /* RecipeDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433D6D4B29FFF4290080DD8D /* RecipeDetailView.swift */; };
+		433D6D5529FFF4470080DD8D /* TitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433D6D5229FFF4470080DD8D /* TitleView.swift */; };
+		433D6D5629FFF4470080DD8D /* CompactTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433D6D5329FFF4470080DD8D /* CompactTitleView.swift */; };
+		433D6D5729FFF4470080DD8D /* RegularTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433D6D5429FFF4470080DD8D /* RegularTitleView.swift */; };
+		433D6D5A29FFF4730080DD8D /* StarRating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433D6D5929FFF4730080DD8D /* StarRating.swift */; };
+		433D6D7529FFF4B60080DD8D /* VegetableDumplings-thumb.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 433D6D5C29FFF4B60080DD8D /* VegetableDumplings-thumb.jpg */; };
+		433D6D7629FFF4B60080DD8D /* VegetableDumplings-small.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 433D6D5D29FFF4B60080DD8D /* VegetableDumplings-small.jpg */; };
+		433D6D7729FFF4B60080DD8D /* MushroomTapioca.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 433D6D5E29FFF4B60080DD8D /* MushroomTapioca.jpg */; };
+		433D6D7829FFF4B60080DD8D /* ChickpeaCurry.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 433D6D5F29FFF4B60080DD8D /* ChickpeaCurry.jpg */; };
+		433D6D7929FFF4B60080DD8D /* PassionfruitMangoSorbet.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 433D6D6029FFF4B60080DD8D /* PassionfruitMangoSorbet.jpg */; };
+		433D6D7A29FFF4B60080DD8D /* VegetableDumplings.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 433D6D6129FFF4B60080DD8D /* VegetableDumplings.jpg */; };
+		433D6D7B29FFF4B60080DD8D /* MushroomTapioca-thumb.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 433D6D6229FFF4B60080DD8D /* MushroomTapioca-thumb.jpg */; };
+		433D6D7C29FFF4B60080DD8D /* PeanutButterTruffles-thumb.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 433D6D6329FFF4B60080DD8D /* PeanutButterTruffles-thumb.jpg */; };
+		433D6D7D29FFF4B60080DD8D /* PeanutButterTruffles-small.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 433D6D6429FFF4B60080DD8D /* PeanutButterTruffles-small.jpg */; };
+		433D6D7E29FFF4B60080DD8D /* MushroomTapioca-small.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 433D6D6529FFF4B60080DD8D /* MushroomTapioca-small.jpg */; };
+		433D6D7F29FFF4B60080DD8D /* PassionfruitMangoSorbet-thumb.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 433D6D6629FFF4B60080DD8D /* PassionfruitMangoSorbet-thumb.jpg */; };
+		433D6D8029FFF4B60080DD8D /* PassionfruitMangoSorbet-small.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 433D6D6729FFF4B60080DD8D /* PassionfruitMangoSorbet-small.jpg */; };
+		433D6D8129FFF4B60080DD8D /* ThreeBeanSalad-small.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 433D6D6829FFF4B60080DD8D /* ThreeBeanSalad-small.jpg */; };
+		433D6D8229FFF4B60080DD8D /* PeanutButterTruffles.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 433D6D6929FFF4B60080DD8D /* PeanutButterTruffles.jpg */; };
+		433D6D8329FFF4B60080DD8D /* ThreeBeanSalad-thumb.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 433D6D6A29FFF4B60080DD8D /* ThreeBeanSalad-thumb.jpg */; };
+		433D6D8429FFF4B60080DD8D /* ChickpeaCurry-small.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 433D6D6B29FFF4B60080DD8D /* ChickpeaCurry-small.jpg */; };
+		433D6D8529FFF4B60080DD8D /* ChickpeaCurry-thumb.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 433D6D6C29FFF4B60080DD8D /* ChickpeaCurry-thumb.jpg */; };
+		433D6D8629FFF4B60080DD8D /* SpicyTomatoSauce-small.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 433D6D6D29FFF4B60080DD8D /* SpicyTomatoSauce-small.jpg */; };
+		433D6D8729FFF4B60080DD8D /* SpicyTomatoSauce-thumb.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 433D6D6E29FFF4B60080DD8D /* SpicyTomatoSauce-thumb.jpg */; };
+		433D6D8829FFF4B60080DD8D /* ThreeBeanSalad.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 433D6D6F29FFF4B60080DD8D /* ThreeBeanSalad.jpg */; };
+		433D6D8929FFF4B60080DD8D /* SpicyTomatoSauce.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 433D6D7029FFF4B60080DD8D /* SpicyTomatoSauce.jpg */; };
+		433D6D8A29FFF4B60080DD8D /* recipeData.json in Resources */ = {isa = PBXBuildFile; fileRef = 433D6D7129FFF4B60080DD8D /* recipeData.json */; };
+		433D6D8B29FFF4B60080DD8D /* AppleCake-thumb.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 433D6D7229FFF4B60080DD8D /* AppleCake-thumb.jpg */; };
+		433D6D8C29FFF4B60080DD8D /* AppleCake.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 433D6D7329FFF4B60080DD8D /* AppleCake.jpg */; };
+		433D6D8D29FFF4B60080DD8D /* AppleCake-small.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 433D6D7429FFF4B60080DD8D /* AppleCake-small.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		433D6D1A29FFEF7A0080DD8D /* DataFlow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DataFlow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		433D6D1D29FFEF7A0080DD8D /* DataFlowApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataFlowApp.swift; sourceTree = "<group>"; };
-		433D6D1F29FFEF7A0080DD8D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		433D6D2129FFEF7B0080DD8D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		433D6D2429FFEF7B0080DD8D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		433D6D2D29FFEFF70080DD8D /* RecipeEditorConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeEditorConfig.swift; sourceTree = "<group>"; };
@@ -33,6 +69,44 @@
 		433D6D3729FFF1310080DD8D /* RecipeBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeBox.swift; sourceTree = "<group>"; };
 		433D6D3929FFF1D60080DD8D /* RecipeEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeEditor.swift; sourceTree = "<group>"; };
 		433D6D3B29FFF1EE0080DD8D /* RecipeEditorForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeEditorForm.swift; sourceTree = "<group>"; };
+		433D6D3E29FFF3040080DD8D /* ContentListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentListView.swift; sourceTree = "<group>"; };
+		433D6D4029FFF31E0080DD8D /* RecipeListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeListView.swift; sourceTree = "<group>"; };
+		433D6D4229FFF3410080DD8D /* RecipeListItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeListItemView.swift; sourceTree = "<group>"; };
+		433D6D4429FFF3F80080DD8D /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		433D6D4729FFF4290080DD8D /* RecipeDirectionsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeDirectionsView.swift; sourceTree = "<group>"; };
+		433D6D4829FFF4290080DD8D /* RecipeDetailToolbar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeDetailToolbar.swift; sourceTree = "<group>"; };
+		433D6D4929FFF4290080DD8D /* RecipeIngredientsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeIngredientsView.swift; sourceTree = "<group>"; };
+		433D6D4A29FFF4290080DD8D /* RecipeNotSelectedView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeNotSelectedView.swift; sourceTree = "<group>"; };
+		433D6D4B29FFF4290080DD8D /* RecipeDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeDetailView.swift; sourceTree = "<group>"; };
+		433D6D5229FFF4470080DD8D /* TitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitleView.swift; sourceTree = "<group>"; };
+		433D6D5329FFF4470080DD8D /* CompactTitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompactTitleView.swift; sourceTree = "<group>"; };
+		433D6D5429FFF4470080DD8D /* RegularTitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegularTitleView.swift; sourceTree = "<group>"; };
+		433D6D5929FFF4730080DD8D /* StarRating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarRating.swift; sourceTree = "<group>"; };
+		433D6D5C29FFF4B60080DD8D /* VegetableDumplings-thumb.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "VegetableDumplings-thumb.jpg"; sourceTree = "<group>"; };
+		433D6D5D29FFF4B60080DD8D /* VegetableDumplings-small.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "VegetableDumplings-small.jpg"; sourceTree = "<group>"; };
+		433D6D5E29FFF4B60080DD8D /* MushroomTapioca.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = MushroomTapioca.jpg; sourceTree = "<group>"; };
+		433D6D5F29FFF4B60080DD8D /* ChickpeaCurry.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ChickpeaCurry.jpg; sourceTree = "<group>"; };
+		433D6D6029FFF4B60080DD8D /* PassionfruitMangoSorbet.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = PassionfruitMangoSorbet.jpg; sourceTree = "<group>"; };
+		433D6D6129FFF4B60080DD8D /* VegetableDumplings.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = VegetableDumplings.jpg; sourceTree = "<group>"; };
+		433D6D6229FFF4B60080DD8D /* MushroomTapioca-thumb.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "MushroomTapioca-thumb.jpg"; sourceTree = "<group>"; };
+		433D6D6329FFF4B60080DD8D /* PeanutButterTruffles-thumb.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "PeanutButterTruffles-thumb.jpg"; sourceTree = "<group>"; };
+		433D6D6429FFF4B60080DD8D /* PeanutButterTruffles-small.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "PeanutButterTruffles-small.jpg"; sourceTree = "<group>"; };
+		433D6D6529FFF4B60080DD8D /* MushroomTapioca-small.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "MushroomTapioca-small.jpg"; sourceTree = "<group>"; };
+		433D6D6629FFF4B60080DD8D /* PassionfruitMangoSorbet-thumb.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "PassionfruitMangoSorbet-thumb.jpg"; sourceTree = "<group>"; };
+		433D6D6729FFF4B60080DD8D /* PassionfruitMangoSorbet-small.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "PassionfruitMangoSorbet-small.jpg"; sourceTree = "<group>"; };
+		433D6D6829FFF4B60080DD8D /* ThreeBeanSalad-small.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "ThreeBeanSalad-small.jpg"; sourceTree = "<group>"; };
+		433D6D6929FFF4B60080DD8D /* PeanutButterTruffles.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = PeanutButterTruffles.jpg; sourceTree = "<group>"; };
+		433D6D6A29FFF4B60080DD8D /* ThreeBeanSalad-thumb.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "ThreeBeanSalad-thumb.jpg"; sourceTree = "<group>"; };
+		433D6D6B29FFF4B60080DD8D /* ChickpeaCurry-small.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "ChickpeaCurry-small.jpg"; sourceTree = "<group>"; };
+		433D6D6C29FFF4B60080DD8D /* ChickpeaCurry-thumb.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "ChickpeaCurry-thumb.jpg"; sourceTree = "<group>"; };
+		433D6D6D29FFF4B60080DD8D /* SpicyTomatoSauce-small.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "SpicyTomatoSauce-small.jpg"; sourceTree = "<group>"; };
+		433D6D6E29FFF4B60080DD8D /* SpicyTomatoSauce-thumb.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "SpicyTomatoSauce-thumb.jpg"; sourceTree = "<group>"; };
+		433D6D6F29FFF4B60080DD8D /* ThreeBeanSalad.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ThreeBeanSalad.jpg; sourceTree = "<group>"; };
+		433D6D7029FFF4B60080DD8D /* SpicyTomatoSauce.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = SpicyTomatoSauce.jpg; sourceTree = "<group>"; };
+		433D6D7129FFF4B60080DD8D /* recipeData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = recipeData.json; sourceTree = "<group>"; };
+		433D6D7229FFF4B60080DD8D /* AppleCake-thumb.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "AppleCake-thumb.jpg"; sourceTree = "<group>"; };
+		433D6D7329FFF4B60080DD8D /* AppleCake.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = AppleCake.jpg; sourceTree = "<group>"; };
+		433D6D7429FFF4B60080DD8D /* AppleCake-small.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "AppleCake-small.jpg"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,10 +139,10 @@
 		433D6D1C29FFEF7A0080DD8D /* DataFlow */ = {
 			isa = PBXGroup;
 			children = (
+				433D6D5B29FFF4B60080DD8D /* Resources */,
 				433D6D2F29FFF00A0080DD8D /* Models */,
 				433D6D2B29FFEFE30080DD8D /* Views */,
 				433D6D1D29FFEF7A0080DD8D /* DataFlowApp.swift */,
-				433D6D1F29FFEF7A0080DD8D /* ContentView.swift */,
 				433D6D2129FFEF7B0080DD8D /* Assets.xcassets */,
 				433D6D2329FFEF7B0080DD8D /* Preview Content */,
 			);
@@ -86,8 +160,12 @@
 		433D6D2B29FFEFE30080DD8D /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				433D6D5829FFF4670080DD8D /* CustomControls */,
 				433D6D3429FFF1000080DD8D /* Navigation */,
+				433D6D3D29FFF2F10080DD8D /* RecipeContentListViews */,
+				433D6D4629FFF4290080DD8D /* RecipeDetailViews */,
 				433D6D2C29FFEFE90080DD8D /* RecipeEditor */,
+				433D6D5129FFF4470080DD8D /* TitleViews */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -115,9 +193,82 @@
 		433D6D3429FFF1000080DD8D /* Navigation */ = {
 			isa = PBXGroup;
 			children = (
+				433D6D3E29FFF3040080DD8D /* ContentListView.swift */,
 				433D6D3529FFF10B0080DD8D /* SidebarView.swift */,
+				433D6D4429FFF3F80080DD8D /* DetailView.swift */,
 			);
 			path = Navigation;
+			sourceTree = "<group>";
+		};
+		433D6D3D29FFF2F10080DD8D /* RecipeContentListViews */ = {
+			isa = PBXGroup;
+			children = (
+				433D6D4029FFF31E0080DD8D /* RecipeListView.swift */,
+				433D6D4229FFF3410080DD8D /* RecipeListItemView.swift */,
+			);
+			path = RecipeContentListViews;
+			sourceTree = "<group>";
+		};
+		433D6D4629FFF4290080DD8D /* RecipeDetailViews */ = {
+			isa = PBXGroup;
+			children = (
+				433D6D4729FFF4290080DD8D /* RecipeDirectionsView.swift */,
+				433D6D4829FFF4290080DD8D /* RecipeDetailToolbar.swift */,
+				433D6D4929FFF4290080DD8D /* RecipeIngredientsView.swift */,
+				433D6D4A29FFF4290080DD8D /* RecipeNotSelectedView.swift */,
+				433D6D4B29FFF4290080DD8D /* RecipeDetailView.swift */,
+			);
+			path = RecipeDetailViews;
+			sourceTree = "<group>";
+		};
+		433D6D5129FFF4470080DD8D /* TitleViews */ = {
+			isa = PBXGroup;
+			children = (
+				433D6D5229FFF4470080DD8D /* TitleView.swift */,
+				433D6D5329FFF4470080DD8D /* CompactTitleView.swift */,
+				433D6D5429FFF4470080DD8D /* RegularTitleView.swift */,
+			);
+			path = TitleViews;
+			sourceTree = "<group>";
+		};
+		433D6D5829FFF4670080DD8D /* CustomControls */ = {
+			isa = PBXGroup;
+			children = (
+				433D6D5929FFF4730080DD8D /* StarRating.swift */,
+			);
+			path = CustomControls;
+			sourceTree = "<group>";
+		};
+		433D6D5B29FFF4B60080DD8D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				433D6D5C29FFF4B60080DD8D /* VegetableDumplings-thumb.jpg */,
+				433D6D5D29FFF4B60080DD8D /* VegetableDumplings-small.jpg */,
+				433D6D5E29FFF4B60080DD8D /* MushroomTapioca.jpg */,
+				433D6D5F29FFF4B60080DD8D /* ChickpeaCurry.jpg */,
+				433D6D6029FFF4B60080DD8D /* PassionfruitMangoSorbet.jpg */,
+				433D6D6129FFF4B60080DD8D /* VegetableDumplings.jpg */,
+				433D6D6229FFF4B60080DD8D /* MushroomTapioca-thumb.jpg */,
+				433D6D6329FFF4B60080DD8D /* PeanutButterTruffles-thumb.jpg */,
+				433D6D6429FFF4B60080DD8D /* PeanutButterTruffles-small.jpg */,
+				433D6D6529FFF4B60080DD8D /* MushroomTapioca-small.jpg */,
+				433D6D6629FFF4B60080DD8D /* PassionfruitMangoSorbet-thumb.jpg */,
+				433D6D6729FFF4B60080DD8D /* PassionfruitMangoSorbet-small.jpg */,
+				433D6D6829FFF4B60080DD8D /* ThreeBeanSalad-small.jpg */,
+				433D6D6929FFF4B60080DD8D /* PeanutButterTruffles.jpg */,
+				433D6D6A29FFF4B60080DD8D /* ThreeBeanSalad-thumb.jpg */,
+				433D6D6B29FFF4B60080DD8D /* ChickpeaCurry-small.jpg */,
+				433D6D6C29FFF4B60080DD8D /* ChickpeaCurry-thumb.jpg */,
+				433D6D6D29FFF4B60080DD8D /* SpicyTomatoSauce-small.jpg */,
+				433D6D6E29FFF4B60080DD8D /* SpicyTomatoSauce-thumb.jpg */,
+				433D6D6F29FFF4B60080DD8D /* ThreeBeanSalad.jpg */,
+				433D6D7029FFF4B60080DD8D /* SpicyTomatoSauce.jpg */,
+				433D6D7129FFF4B60080DD8D /* recipeData.json */,
+				433D6D7229FFF4B60080DD8D /* AppleCake-thumb.jpg */,
+				433D6D7329FFF4B60080DD8D /* AppleCake.jpg */,
+				433D6D7429FFF4B60080DD8D /* AppleCake-small.jpg */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -178,8 +329,33 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				433D6D8629FFF4B60080DD8D /* SpicyTomatoSauce-small.jpg in Resources */,
+				433D6D8D29FFF4B60080DD8D /* AppleCake-small.jpg in Resources */,
+				433D6D7C29FFF4B60080DD8D /* PeanutButterTruffles-thumb.jpg in Resources */,
+				433D6D8429FFF4B60080DD8D /* ChickpeaCurry-small.jpg in Resources */,
+				433D6D7E29FFF4B60080DD8D /* MushroomTapioca-small.jpg in Resources */,
+				433D6D7B29FFF4B60080DD8D /* MushroomTapioca-thumb.jpg in Resources */,
+				433D6D8129FFF4B60080DD8D /* ThreeBeanSalad-small.jpg in Resources */,
+				433D6D8929FFF4B60080DD8D /* SpicyTomatoSauce.jpg in Resources */,
 				433D6D2529FFEF7B0080DD8D /* Preview Assets.xcassets in Resources */,
+				433D6D8229FFF4B60080DD8D /* PeanutButterTruffles.jpg in Resources */,
+				433D6D8A29FFF4B60080DD8D /* recipeData.json in Resources */,
+				433D6D7929FFF4B60080DD8D /* PassionfruitMangoSorbet.jpg in Resources */,
+				433D6D7829FFF4B60080DD8D /* ChickpeaCurry.jpg in Resources */,
+				433D6D8029FFF4B60080DD8D /* PassionfruitMangoSorbet-small.jpg in Resources */,
+				433D6D7D29FFF4B60080DD8D /* PeanutButterTruffles-small.jpg in Resources */,
+				433D6D7529FFF4B60080DD8D /* VegetableDumplings-thumb.jpg in Resources */,
+				433D6D8B29FFF4B60080DD8D /* AppleCake-thumb.jpg in Resources */,
+				433D6D8C29FFF4B60080DD8D /* AppleCake.jpg in Resources */,
 				433D6D2229FFEF7B0080DD8D /* Assets.xcassets in Resources */,
+				433D6D8329FFF4B60080DD8D /* ThreeBeanSalad-thumb.jpg in Resources */,
+				433D6D7629FFF4B60080DD8D /* VegetableDumplings-small.jpg in Resources */,
+				433D6D8829FFF4B60080DD8D /* ThreeBeanSalad.jpg in Resources */,
+				433D6D7729FFF4B60080DD8D /* MushroomTapioca.jpg in Resources */,
+				433D6D7A29FFF4B60080DD8D /* VegetableDumplings.jpg in Resources */,
+				433D6D7F29FFF4B60080DD8D /* PassionfruitMangoSorbet-thumb.jpg in Resources */,
+				433D6D8529FFF4B60080DD8D /* ChickpeaCurry-thumb.jpg in Resources */,
+				433D6D8729FFF4B60080DD8D /* SpicyTomatoSauce-thumb.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -190,15 +366,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				433D6D5629FFF4470080DD8D /* CompactTitleView.swift in Sources */,
+				433D6D3F29FFF3040080DD8D /* ContentListView.swift in Sources */,
+				433D6D4C29FFF4290080DD8D /* RecipeDirectionsView.swift in Sources */,
+				433D6D4529FFF3F80080DD8D /* DetailView.swift in Sources */,
+				433D6D4F29FFF4290080DD8D /* RecipeNotSelectedView.swift in Sources */,
 				433D6D3329FFF03B0080DD8D /* ModelHelpers.swift in Sources */,
-				433D6D2029FFEF7A0080DD8D /* ContentView.swift in Sources */,
+				433D6D5529FFF4470080DD8D /* TitleView.swift in Sources */,
 				433D6D2E29FFEFF70080DD8D /* RecipeEditorConfig.swift in Sources */,
+				433D6D4129FFF31E0080DD8D /* RecipeListView.swift in Sources */,
+				433D6D4D29FFF4290080DD8D /* RecipeDetailToolbar.swift in Sources */,
+				433D6D4E29FFF4290080DD8D /* RecipeIngredientsView.swift in Sources */,
 				433D6D1E29FFEF7A0080DD8D /* DataFlowApp.swift in Sources */,
 				433D6D3A29FFF1D60080DD8D /* RecipeEditor.swift in Sources */,
 				433D6D3829FFF1310080DD8D /* RecipeBox.swift in Sources */,
+				433D6D5A29FFF4730080DD8D /* StarRating.swift in Sources */,
 				433D6D3629FFF10B0080DD8D /* SidebarView.swift in Sources */,
+				433D6D4329FFF3410080DD8D /* RecipeListItemView.swift in Sources */,
+				433D6D5729FFF4470080DD8D /* RegularTitleView.swift in Sources */,
 				433D6D3C29FFF1EE0080DD8D /* RecipeEditorForm.swift in Sources */,
 				433D6D3129FFF0180080DD8D /* Recipe.swift in Sources */,
+				433D6D5029FFF4290080DD8D /* RecipeDetailView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
