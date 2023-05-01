@@ -16,6 +16,8 @@
 		433D6D3329FFF03B0080DD8D /* ModelHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433D6D3229FFF03B0080DD8D /* ModelHelpers.swift */; };
 		433D6D3629FFF10B0080DD8D /* SidebarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433D6D3529FFF10B0080DD8D /* SidebarView.swift */; };
 		433D6D3829FFF1310080DD8D /* RecipeBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433D6D3729FFF1310080DD8D /* RecipeBox.swift */; };
+		433D6D3A29FFF1D60080DD8D /* RecipeEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433D6D3929FFF1D60080DD8D /* RecipeEditor.swift */; };
+		433D6D3C29FFF1EE0080DD8D /* RecipeEditorForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433D6D3B29FFF1EE0080DD8D /* RecipeEditorForm.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +31,8 @@
 		433D6D3229FFF03B0080DD8D /* ModelHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelHelpers.swift; sourceTree = "<group>"; };
 		433D6D3529FFF10B0080DD8D /* SidebarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidebarView.swift; sourceTree = "<group>"; };
 		433D6D3729FFF1310080DD8D /* RecipeBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeBox.swift; sourceTree = "<group>"; };
+		433D6D3929FFF1D60080DD8D /* RecipeEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeEditor.swift; sourceTree = "<group>"; };
+		433D6D3B29FFF1EE0080DD8D /* RecipeEditorForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeEditorForm.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +96,8 @@
 			isa = PBXGroup;
 			children = (
 				433D6D2D29FFEFF70080DD8D /* RecipeEditorConfig.swift */,
+				433D6D3929FFF1D60080DD8D /* RecipeEditor.swift */,
+				433D6D3B29FFF1EE0080DD8D /* RecipeEditorForm.swift */,
 			);
 			path = RecipeEditor;
 			sourceTree = "<group>";
@@ -188,8 +194,10 @@
 				433D6D2029FFEF7A0080DD8D /* ContentView.swift in Sources */,
 				433D6D2E29FFEFF70080DD8D /* RecipeEditorConfig.swift in Sources */,
 				433D6D1E29FFEF7A0080DD8D /* DataFlowApp.swift in Sources */,
+				433D6D3A29FFF1D60080DD8D /* RecipeEditor.swift in Sources */,
 				433D6D3829FFF1310080DD8D /* RecipeBox.swift in Sources */,
 				433D6D3629FFF10B0080DD8D /* SidebarView.swift in Sources */,
+				433D6D3C29FFF1EE0080DD8D /* RecipeEditorForm.swift in Sources */,
 				433D6D3129FFF0180080DD8D /* Recipe.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
