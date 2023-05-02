@@ -15,6 +15,8 @@ struct ContentView: View {
             AdvancedTextStyling()
             Divider()
             TextAlignmetStyling()
+            Divider()
+            TextFormatting()
         }
     }
 }
@@ -98,12 +100,94 @@ struct TextAlignmetStyling: View {
             }
             .pickerStyle(.segmented)
             .padding()
-            
+
             Text("This is an extremely long text string that will never fit even the widest of phones without wrapping")
                 .font(.largeTitle)
                 .multilineTextAlignment(alignment)
                 .frame(width: 300)
         }
+    }
+}
+
+struct TextFormatting: View {
+    @State private var ingredients = [String]()
+    @State private var rolls = [Int]()
+    let lenght = Measurement(value: 190, unit: UnitLength.centimeters)
+    @State private var name = "Paul"
+    
+    var body: some View {
+        VStack(spacing: 20) {
+            VStack {
+                Text(ingredients, format: .list(type: .and))
+                //            Text(ingredients, format: .list(type: .or))
+
+                Button("Add Ingredients") {
+                    let possibles = ["Egg", "Sausage", "Bacon", "Spam"]
+                    if let newIngredient = possibles.randomElement() {
+                        ingredients.append(newIngredient)
+                    }
+                }
+            }
+
+            VStack {
+                Text(rolls, format: .list(memberStyle: .number, type: .and))
+
+                Button("Roll Dice") {
+                    let result = Int.random(in: 1 ... 6)
+                    rolls.append(result)
+                }
+            }
+
+            VStack {
+                Text("Measurement")
+                Text(lenght, format: .measurement(width: .wide))
+            }
+
+            VStack {
+                Text("Currency")
+                Text(72.3, format: .currency(code: "EUR"))
+            }
+
+            VStack {
+                Text("iOS14 and iOS13 Formatting")
+                iOS14_iOS13TextFormatting()
+            }
+
+            VStack {
+                // show just the date
+                Text(Date.now.addingTimeInterval(600), style: .date)
+
+                // show just the time
+                Text(Date.now.addingTimeInterval(600), style: .time)
+
+                // show the relative distance from now, automatically updating
+                Text(Date.now.addingTimeInterval(600), style: .relative)
+
+                // make a timer style, automatically updating
+                Text(Date.now.addingTimeInterval(600), style: .timer)
+            }
+
+            VStack {
+                TextField("Shout your name at me", text: $name)
+                    .textFieldStyle(.roundedBorder)
+                    .textCase(.uppercase)
+                    .padding(.horizontal)
+            }
+        }
+    }
+}
+
+struct iOS14_iOS13TextFormatting: View {
+    static let taskDateFormat: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.dateStyle = .long
+        return formatter
+    }()
+
+    let dueDate = Date.now
+
+    var body: some View {
+        Text("Task due date: \(dueDate, formatter: Self.taskDateFormat)")
     }
 }
 
