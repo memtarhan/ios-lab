@@ -17,6 +17,8 @@ struct ContentView: View {
             TextAlignmetStyling()
             Divider()
             TextFormatting()
+            Divider()
+            TextAndIcon()
         }
     }
 }
@@ -114,7 +116,7 @@ struct TextFormatting: View {
     @State private var rolls = [Int]()
     let lenght = Measurement(value: 190, unit: UnitLength.centimeters)
     @State private var name = "Paul"
-    
+
     var body: some View {
         VStack(spacing: 20) {
             VStack {
@@ -188,6 +190,42 @@ struct iOS14_iOS13TextFormatting: View {
 
     var body: some View {
         Text("Task due date: \(dueDate, formatter: Self.taskDateFormat)")
+    }
+}
+
+struct TextAndIcon: View {
+    var body: some View {
+        VStack {
+            Label("Your account", systemImage: "person.crop.circle")
+                .font(.title)
+            VStack {
+                Label("Text Only", systemImage: "heart")
+                    .font(.title)
+                    .labelStyle(.titleOnly)
+                Label("Icon Only", systemImage: "star")
+                    .font(.title)
+                    .labelStyle(.iconOnly)
+                Label("Both", systemImage: "heart")
+                    .font(.title)
+                    .labelStyle(.titleAndIcon)
+            }
+            
+            VStack {
+                Label {
+                    Text("Mehmet Tarhan")
+                        .foregroundColor(.primary)
+                        .font(.largeTitle)
+                        .padding()
+                        .background(.gray.opacity(0.2))
+                        .clipShape(Capsule())
+                    
+                } icon: {
+                    RoundedRectangle(cornerRadius: 10)
+                        .fill(.blue)
+                        .frame(width: 64, height: 64)
+                }
+            }
+        }
     }
 }
 
