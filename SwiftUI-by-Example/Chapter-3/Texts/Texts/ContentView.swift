@@ -10,15 +10,35 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         ScrollView {
-            UsingText()
-            Divider()
-            AdvancedTextStyling()
-            Divider()
-            TextAlignmetStyling()
-            Divider()
-            TextFormatting()
-            Divider()
-            TextAndIcon()
+            Group {
+                UsingText()
+                Divider()
+            }
+
+            Group {
+                AdvancedTextStyling()
+                Divider()
+            }
+
+            Group {
+                TextAlignmetStyling()
+                Divider()
+            }
+
+            Group {
+                TextFormatting()
+                Divider()
+            }
+
+            Group {
+                TextAndIcon()
+                Divider()
+            }
+
+            Group {
+                MarkdownText()
+                Divider()
+            }
         }
     }
 }
@@ -209,7 +229,7 @@ struct TextAndIcon: View {
                     .font(.title)
                     .labelStyle(.titleAndIcon)
             }
-            
+
             VStack {
                 Label {
                     Text("Mehmet Tarhan")
@@ -218,13 +238,25 @@ struct TextAndIcon: View {
                         .padding()
                         .background(.gray.opacity(0.2))
                         .clipShape(Capsule())
-                    
+
                 } icon: {
                     RoundedRectangle(cornerRadius: 10)
                         .fill(.blue)
                         .frame(width: 64, height: 64)
                 }
             }
+        }
+    }
+}
+
+struct MarkdownText: View {
+    var body: some View {
+        VStack {
+            Text("This is regular text.")
+            Text("* This is **bold** text, this is *italic* text, and this is ***bold, italic*** text.")
+            Text("~~A strikethrough example~~")
+            Text("`Monospaced works too`")
+            Text("Visit Apple: [click here](https://apple.com)")
         }
     }
 }
