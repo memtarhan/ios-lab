@@ -9,6 +9,18 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
+        ScrollView {
+            UsingText()
+            Divider()
+            AdvancedTextStyling()
+            Divider()
+            TextAlignmetStyling()
+        }
+    }
+}
+
+struct UsingText: View {
+    var body: some View {
         VStack(spacing: 32) {
             Text("Hello, world!")
                 .background(Color.yellow)
@@ -28,7 +40,7 @@ struct ContentView: View {
             Text("This is always two lines")
                 .lineLimit(2, reservesSpace: true)
                 .background(Color.yellow)
-            
+
             Text("The best laid plans")
                 .foregroundStyle(.blue.gradient)
                 .padding()
@@ -36,6 +48,62 @@ struct ContentView: View {
                 .font(.headline)
         }
         .padding()
+    }
+}
+
+struct AdvancedTextStyling: View {
+    var message1: AttributedString {
+        var result = AttributedString("Hello")
+        result.font = .largeTitle
+        result.foregroundColor = .white
+        result.backgroundColor = .red
+        return result
+    }
+
+    var message2: AttributedString {
+        var result = AttributedString("World")
+        result.font = .largeTitle
+        result.foregroundColor = .white
+        result.backgroundColor = .green
+        return result
+    }
+
+    var message3: AttributedString {
+        var result = AttributedString("Heyyy")
+        result.font = .largeTitle
+        result.foregroundColor = .white
+        result.backgroundColor = .blue
+        result.underlineStyle = Text.LineStyle(pattern: .solid, color: .white)
+        return result
+    }
+
+    var body: some View {
+        VStack {
+            Text(message1 + message2)
+            Text(message3)
+        }
+    }
+}
+
+struct TextAlignmetStyling: View {
+    let alignments: [TextAlignment] = [.leading, .center, .trailing]
+    @State private var alignment = TextAlignment.leading
+
+    var body: some View {
+        VStack {
+            Picker("Text alignment", selection: $alignment) {
+                ForEach(alignments, id: \.self) { alignment in
+                    Text(String(describing: alignment))
+                }
+            }
+            .pickerStyle(.segmented)
+            .padding()
+            
+            Text("This is an extremely long text string that will never fit even the widest of phones without wrapping")
+                .font(.largeTitle)
+                .multilineTextAlignment(alignment)
+                .frame(width: 300)
+        }
     }
 }
 
