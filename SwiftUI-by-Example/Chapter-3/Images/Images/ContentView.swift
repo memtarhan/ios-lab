@@ -13,6 +13,8 @@ struct ContentView: View {
             Images()
             Divider()
             Gradients()
+            Divider()
+            ImageBackground()
         }
     }
 }
@@ -89,6 +91,23 @@ struct Gradients: View {
                 .frame(width: 200, height: 200)
         }
         .padding()
+    }
+}
+
+struct ImageBackground: View {
+    var body: some View {
+        VStack {
+            Text("Mehmet Tarhan")
+                .font(.system(size: 45))
+                .padding(64)
+                .multilineTextAlignment(.center)
+                .background(
+                    Image("image1")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                )
+                .frame(width: 320)
+        }
     }
 }
 
