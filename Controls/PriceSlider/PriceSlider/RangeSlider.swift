@@ -29,19 +29,31 @@ class RangeSliderView: UIView {
         return label
     }()
 
+    var selectedLowerValue: Int = 0 {
+        didSet {
+            lowerValueLabel.text = "\(selectedLowerValue)"
+        }
+    }
+
+    var selectedUpperValue: Int = 0 {
+        didSet {
+            higherValueLabel.text = "\(selectedUpperValue)"
+        }
+    }
+
     init(frame: CGRect,
-         lowestBound: CGFloat,
-         defaultLowerValue: CGFloat,
-         highestBound: CGFloat,
-         defaultHigherValue: CGFloat) {
+         lowestBound: Int,
+         defaultLowerValue: Int,
+         highestBound: Int,
+         defaultHigherValue: Int) {
         super.init(frame: frame)
 
         let halfHeight = frame.height / 2
         let slider = RangeSlider(frame: CGRect(x: 0, y: halfHeight - 4, width: frame.width, height: halfHeight),
-                                 lowestBound: lowestBound,
-                                 defaultLowerValue: defaultLowerValue,
-                                 highestBound: highestBound,
-                                 defaultHigherValue: defaultHigherValue)
+                                 lowestBound: CGFloat(lowestBound),
+                                 defaultLowerValue: CGFloat(defaultLowerValue),
+                                 highestBound: CGFloat(highestBound),
+                                 defaultHigherValue: CGFloat(defaultHigherValue))
         slider.delegate = self
         addSubview(slider)
 
@@ -66,11 +78,11 @@ class RangeSliderView: UIView {
 
 extension RangeSliderView: RangeSliderDelegate {
     func rangeSlider(didUpdateLower value: CGFloat) {
-        lowerValueLabel.text = "\(Int(value))"
+        selectedLowerValue = Int(value)
     }
 
     func rangeSlider(didUpdateUpper value: CGFloat) {
-        higherValueLabel.text = "\(Int(value))"
+        selectedUpperValue = Int(value)
     }
 }
 
@@ -104,8 +116,8 @@ class RangeSlider: UIControl {
          highestBound: CGFloat,
          defaultHigherValue: CGFloat,
          trackTintColor: UIColor = UIColor.secondaryLabel,
-         trackHighlightTintColor: UIColor = UIColor.red,
-         thumbTintColor: UIColor = UIColor.white) {
+         trackHighlightTintColor: UIColor = UIColor.secondarySystemBackground,
+         thumbTintColor: UIColor = UIColor.red) {
         self.lowestBound = lowestBound
         self.highestBound = highestBound
 
