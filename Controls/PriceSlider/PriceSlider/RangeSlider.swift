@@ -12,6 +12,8 @@ import QuartzCore
 protocol RangeSliderDelegate: AnyObject {
     func rangeSlider(didUpdateLower value: CGFloat)
     func rangeSlider(didUpdateUpper value: CGFloat)
+    func rangeSlider(didUpdateLowerCenter center: CGFloat)
+    func rangeSlider(didUpdateUpperCenter center: CGFloat)
 }
 
 class RangeSliderView: UIView {
@@ -45,7 +47,10 @@ class RangeSliderView: UIView {
          lowestBound: Int,
          defaultLowerValue: Int,
          highestBound: Int,
-         defaultHigherValue: Int) {
+         defaultHigherValue: Int,
+         primaryColor: UIColor,
+         secondaryColor: UIColor,
+         font: UIFont) {
         super.init(frame: frame)
 
         let halfHeight = frame.height / 2
@@ -53,7 +58,10 @@ class RangeSliderView: UIView {
                                  lowestBound: CGFloat(lowestBound),
                                  defaultLowerValue: CGFloat(defaultLowerValue),
                                  highestBound: CGFloat(highestBound),
-                                 defaultHigherValue: CGFloat(defaultHigherValue))
+                                 defaultHigherValue: CGFloat(defaultHigherValue),
+                                 trackTintColor: secondaryColor,
+                                 trackHighlightTintColor: primaryColor,
+                                 thumbTintColor: primaryColor)
         slider.delegate = self
         addSubview(slider)
 
@@ -69,6 +77,12 @@ class RangeSliderView: UIView {
 
         lowerValueLabel.text = "\(Int(defaultLowerValue))"
         higherValueLabel.text = "\(Int(defaultHigherValue))"
+
+        lowerValueLabel.textColor = primaryColor
+        lowerValueLabel.font = font
+
+        higherValueLabel.textColor = primaryColor
+        higherValueLabel.font = font
     }
 
     required init?(coder: NSCoder) {
@@ -83,6 +97,12 @@ extension RangeSliderView: RangeSliderDelegate {
 
     func rangeSlider(didUpdateUpper value: CGFloat) {
         selectedUpperValue = Int(value)
+    }
+
+    func rangeSlider(didUpdateLowerCenter center: CGFloat) {
+    }
+
+    func rangeSlider(didUpdateUpperCenter center: CGFloat) {
     }
 }
 
@@ -154,15 +174,16 @@ class RangeSlider: UIControl {
         trackLayer.setNeedsDisplay()
 
         let lowerThumbCenter = CGFloat(positionForValue(value: lowerValue))
-
         lowerThumbLayer.frame = CGRect(x: lowerThumbCenter - thumbWidth / 2.0, y: 0.0,
                                        width: thumbWidth, height: thumbWidth)
         lowerThumbLayer.setNeedsDisplay()
+        delegate?.rangeSlider(didUpdateLowerCenter: lowerThumbCenter)
 
         let upperThumbCenter = CGFloat(positionForValue(value: upperValue))
         upperThumbLayer.frame = CGRect(x: upperThumbCenter - thumbWidth / 2.0, y: 0.0,
                                        width: thumbWidth, height: thumbWidth)
         upperThumbLayer.setNeedsDisplay()
+        delegate?.rangeSlider(didUpdateUpperCenter: upperThumbCenter)
     }
 
     func positionForValue(value: Double) -> Double {
@@ -243,23 +264,23 @@ class RangeSliderThumbLayer: CALayer {
             let thumbPath = UIBezierPath(roundedRect: thumbFrame, cornerRadius: cornerRadius)
 
             // Fill - with a subtle shadow
-            let shadowColor = UIColor.gray
+//            let shadowColor = UIColor.gray
 //            ctx.setShadow(offset: CGSize(width: 0.0, height: 1.0), blur: 1.0, color: shadowColor.cgColor)
             ctx.setFillColor(slider.thumbTintColor.cgColor)
             ctx.addPath(thumbPath.cgPath)
             ctx.fillPath()
 
             // Outline
-            ctx.setStrokeColor(shadowColor.cgColor)
-            ctx.setLineWidth(0.5)
-            ctx.addPath(thumbPath.cgPath)
-            ctx.strokePath()
+//            ctx.setStrokeColor(shadowColor.cgColor)
+//            ctx.setLineWidth(0.5)
+//            ctx.addPath(thumbPath.cgPath)
+//            ctx.strokePath()
 
-            if highlighted {
-                ctx.setFillColor(UIColor(white: 0.0, alpha: 0.1).cgColor)
-                ctx.addPath(thumbPath.cgPath)
-                ctx.fillPath()
-            }
+//            if highlighted {
+//                ctx.setFillColor(UIColor(white: 0.0, alpha: 0.1).cgColor)
+//                ctx.addPath(thumbPath.cgPath)
+//                ctx.fillPath()
+//            }
         }
     }
 }
