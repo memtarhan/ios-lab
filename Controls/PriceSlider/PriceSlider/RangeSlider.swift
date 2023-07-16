@@ -20,6 +20,7 @@ class RangeSliderView: UIView {
     private lazy var lowerValueLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
+        label.textAlignment = .center
 
         return label
     }()
@@ -27,9 +28,13 @@ class RangeSliderView: UIView {
     private lazy var higherValueLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
+        label.textAlignment = .center
 
         return label
     }()
+
+    private var lowerValueLabelConstraint: NSLayoutConstraint?
+    private var higherValueLabelConstraint: NSLayoutConstraint?
 
     var selectedLowerValue: Int = 0 {
         didSet {
@@ -68,11 +73,14 @@ class RangeSliderView: UIView {
         addSubview(lowerValueLabel)
         addSubview(higherValueLabel)
 
+        lowerValueLabelConstraint = lowerValueLabel.centerXAnchor.constraint(equalTo: leadingAnchor, constant: 24)
+        higherValueLabelConstraint = higherValueLabel.centerXAnchor.constraint(equalTo: trailingAnchor, constant: -24)
+
         NSLayoutConstraint.activate([
-            lowerValueLabel.leadingAnchor.constraint(equalTo: leadingAnchor),
+            lowerValueLabelConstraint!,
             lowerValueLabel.topAnchor.constraint(equalTo: topAnchor),
             higherValueLabel.topAnchor.constraint(equalTo: topAnchor),
-            higherValueLabel.trailingAnchor.constraint(equalTo: trailingAnchor),
+            higherValueLabelConstraint!,
         ])
 
         lowerValueLabel.text = "\(Int(defaultLowerValue))"
@@ -100,9 +108,29 @@ extension RangeSliderView: RangeSliderDelegate {
     }
 
     func rangeSlider(didUpdateLowerCenter center: CGFloat) {
+        if let lowerValueLabelConstraint {
+            NSLayoutConstraint.deactivate([
+                lowerValueLabelConstraint,
+            ])
+        }
+
+        lowerValueLabelConstraint = lowerValueLabel.centerXAnchor.constraint(equalTo: leadingAnchor, constant: center)
+        NSLayoutConstraint.activate([
+            lowerValueLabelConstraint!,
+        ])
     }
 
     func rangeSlider(didUpdateUpperCenter center: CGFloat) {
+        if let higherValueLabelConstraint {
+            NSLayoutConstraint.deactivate([
+                higherValueLabelConstraint,
+            ])
+        }
+
+        higherValueLabelConstraint = higherValueLabel.centerXAnchor.constraint(equalTo: leadingAnchor, constant: center)
+        NSLayoutConstraint.activate([
+            higherValueLabelConstraint!,
+        ])
     }
 }
 
