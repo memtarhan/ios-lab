@@ -9,13 +9,22 @@
 /* Begin PBXBuildFile section */
 		434AA6C92B10231000B0701E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434AA6C82B10231000B0701E /* AppDelegate.swift */; };
 		434AA6CB2B10231000B0701E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434AA6CA2B10231000B0701E /* SceneDelegate.swift */; };
-		434AA6CD2B10231000B0701E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434AA6CC2B10231000B0701E /* ViewController.swift */; };
-		434AA6D02B10231000B0701E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 434AA6CE2B10231000B0701E /* Main.storyboard */; };
 		434AA6D22B10231200B0701E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 434AA6D12B10231200B0701E /* Assets.xcassets */; };
 		434AA6D52B10231200B0701E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 434AA6D32B10231200B0701E /* LaunchScreen.storyboard */; };
 		434AA6E02B10231200B0701E /* CleanArchitectureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434AA6DF2B10231200B0701E /* CleanArchitectureTests.swift */; };
 		434AA6EA2B10231200B0701E /* CleanArchitectureUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434AA6E92B10231200B0701E /* CleanArchitectureUITests.swift */; };
 		434AA6EC2B10231200B0701E /* CleanArchitectureUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434AA6EB2B10231200B0701E /* CleanArchitectureUITestsLaunchTests.swift */; };
+		434AA6FD2B10239700B0701E /* HomeConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434AA6FC2B10239700B0701E /* HomeConfigurator.swift */; };
+		434AA7002B1023D200B0701E /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = 434AA6FF2B1023D200B0701E /* Swinject */; };
+		434AA7022B1023D200B0701E /* Swinject-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 434AA7012B1023D200B0701E /* Swinject-Dynamic */; };
+		434AA7052B10248200B0701E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434AA7032B10248200B0701E /* HomeViewController.swift */; };
+		434AA7062B10248200B0701E /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 434AA7042B10248200B0701E /* HomeViewController.xib */; };
+		434AA7082B10267600B0701E /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434AA7072B10267600B0701E /* HomeInteractor.swift */; };
+		434AA70A2B10271200B0701E /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434AA7092B10271200B0701E /* HomePresenter.swift */; };
+		434AA70D2B102A9F00B0701E /* ScreenFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434AA70C2B102A9F00B0701E /* ScreenFactory.swift */; };
+		434AA7102B102AE700B0701E /* ScreenFactoryConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434AA70F2B102AE700B0701E /* ScreenFactoryConfigurator.swift */; };
+		434AA7122B102B7F00B0701E /* NibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434AA7112B102B7F00B0701E /* NibLoadable.swift */; };
+		434AA7142B102B9100B0701E /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434AA7132B102B9100B0701E /* BaseViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,8 +48,6 @@
 		434AA6C52B10231000B0701E /* CleanArchitecture.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CleanArchitecture.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		434AA6C82B10231000B0701E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		434AA6CA2B10231000B0701E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		434AA6CC2B10231000B0701E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		434AA6CF2B10231000B0701E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		434AA6D12B10231200B0701E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		434AA6D42B10231200B0701E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		434AA6D62B10231200B0701E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,6 +56,15 @@
 		434AA6E52B10231200B0701E /* CleanArchitectureUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CleanArchitectureUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		434AA6E92B10231200B0701E /* CleanArchitectureUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CleanArchitectureUITests.swift; sourceTree = "<group>"; };
 		434AA6EB2B10231200B0701E /* CleanArchitectureUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CleanArchitectureUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		434AA6FC2B10239700B0701E /* HomeConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeConfigurator.swift; sourceTree = "<group>"; };
+		434AA7032B10248200B0701E /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		434AA7042B10248200B0701E /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		434AA7072B10267600B0701E /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
+		434AA7092B10271200B0701E /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
+		434AA70C2B102A9F00B0701E /* ScreenFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenFactory.swift; sourceTree = "<group>"; };
+		434AA70F2B102AE700B0701E /* ScreenFactoryConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenFactoryConfigurator.swift; sourceTree = "<group>"; };
+		434AA7112B102B7F00B0701E /* NibLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibLoadable.swift; sourceTree = "<group>"; };
+		434AA7132B102B9100B0701E /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +72,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				434AA7002B1023D200B0701E /* Swinject in Frameworks */,
+				434AA7022B1023D200B0701E /* Swinject-Dynamic in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,10 +117,11 @@
 		434AA6C72B10231000B0701E /* CleanArchitecture */ = {
 			isa = PBXGroup;
 			children = (
+				434AA70B2B102A9300B0701E /* Common */,
+				434AA6F92B10237200B0701E /* Configurators */,
+				434AA6F82B10236C00B0701E /* Screens */,
 				434AA6C82B10231000B0701E /* AppDelegate.swift */,
 				434AA6CA2B10231000B0701E /* SceneDelegate.swift */,
-				434AA6CC2B10231000B0701E /* ViewController.swift */,
-				434AA6CE2B10231000B0701E /* Main.storyboard */,
 				434AA6D12B10231200B0701E /* Assets.xcassets */,
 				434AA6D32B10231200B0701E /* LaunchScreen.storyboard */,
 				434AA6D62B10231200B0701E /* Info.plist */,
@@ -127,6 +146,60 @@
 			path = CleanArchitectureUITests;
 			sourceTree = "<group>";
 		};
+		434AA6F82B10236C00B0701E /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				434AA6FA2B10238000B0701E /* Home */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		434AA6F92B10237200B0701E /* Configurators */ = {
+			isa = PBXGroup;
+			children = (
+				434AA70E2B102AD600B0701E /* Common */,
+				434AA6FB2B10238800B0701E /* Screens */,
+			);
+			path = Configurators;
+			sourceTree = "<group>";
+		};
+		434AA6FA2B10238000B0701E /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				434AA7032B10248200B0701E /* HomeViewController.swift */,
+				434AA7042B10248200B0701E /* HomeViewController.xib */,
+				434AA7072B10267600B0701E /* HomeInteractor.swift */,
+				434AA7092B10271200B0701E /* HomePresenter.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		434AA6FB2B10238800B0701E /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				434AA6FC2B10239700B0701E /* HomeConfigurator.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		434AA70B2B102A9300B0701E /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				434AA7132B102B9100B0701E /* BaseViewController.swift */,
+				434AA7112B102B7F00B0701E /* NibLoadable.swift */,
+				434AA70C2B102A9F00B0701E /* ScreenFactory.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		434AA70E2B102AD600B0701E /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				434AA70F2B102AE700B0701E /* ScreenFactoryConfigurator.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -143,6 +216,10 @@
 			dependencies = (
 			);
 			name = CleanArchitecture;
+			packageProductDependencies = (
+				434AA6FF2B1023D200B0701E /* Swinject */,
+				434AA7012B1023D200B0701E /* Swinject-Dynamic */,
+			);
 			productName = CleanArchitecture;
 			productReference = 434AA6C52B10231000B0701E /* CleanArchitecture.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +292,9 @@
 				Base,
 			);
 			mainGroup = 434AA6BC2B10231000B0701E;
+			packageReferences = (
+				434AA6FE2B1023D200B0701E /* XCRemoteSwiftPackageReference "Swinject" */,
+			);
 			productRefGroup = 434AA6C62B10231000B0701E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -233,7 +313,7 @@
 			files = (
 				434AA6D52B10231200B0701E /* LaunchScreen.storyboard in Resources */,
 				434AA6D22B10231200B0701E /* Assets.xcassets in Resources */,
-				434AA6D02B10231000B0701E /* Main.storyboard in Resources */,
+				434AA7062B10248200B0701E /* HomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,7 +338,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				434AA6CD2B10231000B0701E /* ViewController.swift in Sources */,
+				434AA70A2B10271200B0701E /* HomePresenter.swift in Sources */,
+				434AA7052B10248200B0701E /* HomeViewController.swift in Sources */,
+				434AA6FD2B10239700B0701E /* HomeConfigurator.swift in Sources */,
+				434AA7122B102B7F00B0701E /* NibLoadable.swift in Sources */,
+				434AA7082B10267600B0701E /* HomeInteractor.swift in Sources */,
+				434AA7142B102B9100B0701E /* BaseViewController.swift in Sources */,
+				434AA70D2B102A9F00B0701E /* ScreenFactory.swift in Sources */,
+				434AA7102B102AE700B0701E /* ScreenFactoryConfigurator.swift in Sources */,
 				434AA6C92B10231000B0701E /* AppDelegate.swift in Sources */,
 				434AA6CB2B10231000B0701E /* SceneDelegate.swift in Sources */,
 			);
@@ -297,14 +384,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		434AA6CE2B10231000B0701E /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				434AA6CF2B10231000B0701E /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		434AA6D32B10231200B0701E /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -447,7 +526,6 @@
 				INFOPLIST_FILE = CleanArchitecture/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -475,7 +553,6 @@
 				INFOPLIST_FILE = CleanArchitecture/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -607,6 +684,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		434AA6FE2B1023D200B0701E /* XCRemoteSwiftPackageReference "Swinject" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Swinject/Swinject.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.8.4;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		434AA6FF2B1023D200B0701E /* Swinject */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 434AA6FE2B1023D200B0701E /* XCRemoteSwiftPackageReference "Swinject" */;
+			productName = Swinject;
+		};
+		434AA7012B1023D200B0701E /* Swinject-Dynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 434AA6FE2B1023D200B0701E /* XCRemoteSwiftPackageReference "Swinject" */;
+			productName = "Swinject-Dynamic";
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 434AA6BD2B10231000B0701E /* Project object */;
 }
