@@ -80,6 +80,7 @@ private extension SceneDelegate {
 private extension SceneDelegate {
     /// - Initializing UI w/ initial view controller
     func initUI() {
-        rootViewController = assembler?.resolver.resolve(HomeViewController.self) as? UIViewController
+        let home = assembler?.resolver.resolve(HomeViewController.self) as! UIViewController
+        rootViewController = UINavigationController(rootViewController: home)
     }
 }

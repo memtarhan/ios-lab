@@ -11,7 +11,7 @@ import Swinject
 class HomeConfigurator: Assembly {
     func assemble(container: Container) {
         container.register(HomeViewController.self) { resolver in
-            let view = resolver.resolve(HomeViewController.self)!
+            let view = HomeViewControllerImplementation.instantiate()
             var interactor = resolver.resolve(HomeInteractor.self)!
             let presenter = resolver.resolve(HomePresenter.self)!
 
@@ -20,10 +20,6 @@ class HomeConfigurator: Assembly {
             interactor.presenter = presenter 
 
             return view
-        }
-
-        container.register(HomeViewController.self) { _ in
-            HomeViewControllerImplementation.instantiate()
         }
 
         container.register(HomeInteractor.self) { _ in

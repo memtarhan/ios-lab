@@ -17,5 +17,7 @@ class HomeInteractorImplementation: HomeInteractor {
     weak var presenter: HomePresenter!
     
     func load() {
+        /// - Retrive some data
+        presenter.display(items: (0 ... 10).map { "Item #\($0 + 1)" })
     }
 }

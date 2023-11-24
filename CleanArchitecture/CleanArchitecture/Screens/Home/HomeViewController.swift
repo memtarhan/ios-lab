@@ -42,6 +42,7 @@ private extension HomeViewControllerImplementation {
                     break
                 }
             } receiveValue: { data in
+                /// - Display received data accordingly
                 print(data)
             }
             .store(in: &cancellables)
