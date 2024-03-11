@@ -7,15 +7,6 @@
 
 import AVKit
 
-protocol PlayerViewControllerCoordinatorDelegate: AnyObject {
-    func playerViewControllerCoordinator(
-        _ coordinator: PlayerViewControllerCoordinator,
-        restoreUIForPIPStop completion: @escaping (Bool) -> Void
-    )
-
-    func playerViewControllerCoordinatorWillDismiss(_ coordinator: PlayerViewControllerCoordinator)
-}
-
 class PlayerViewControllerCoordinator: NSObject {
     // MARK: - Initialization
 
@@ -28,7 +19,6 @@ class PlayerViewControllerCoordinator: NSObject {
 
     weak var delegate: PlayerViewControllerCoordinatorDelegate?
     var video: Video
-
     private(set) var status: Status = [] {
         didSet {
             if oldValue.isBeingShown && !status.isBeingShown {
@@ -100,6 +90,7 @@ extension PlayerViewControllerCoordinator {
     // or set the transitioning delegate. AVPlayerViewController handles that automatically.
     func presentFullScreen(from presentingViewController: UIViewController) {
         guard !status.contains(.fullScreenActive) else { return }
+        removeFromParentIfNeeded()
         loadPlayerViewControllerIfNeeded()
         guard let playerViewController = playerViewControllerIfLoaded else { return }
         presentingViewController.present(playerViewController, animated: true) {
@@ -129,61 +120,19 @@ extension PlayerViewControllerCoordinator {
             self.status.remove(.fullScreenActive)
         }
     }
-}
 
-extension PlayerViewControllerCoordinator {
-    // An OptionSet describing the various states the app tracks in the DebugHUD.
-    struct Status: OptionSet, CustomDebugStringConvertible {
-        let rawValue: Int
-
-        static let fullScreenActive = Status(rawValue: 1 << 0)
-        static let beingPresented = Status(rawValue: 1 << 1)
-        static let beingDismissed = Status(rawValue: 1 << 2)
-        static let pictureInPictureActive = Status(rawValue: 1 << 3)
-        static let readyForDisplay = Status(rawValue: 1 << 4)
-
-        static let descriptions: [(Status, String)] = [
-            (.fullScreenActive, "Full Screen Active"),
-            (.beingPresented, "Being Presented"),
-            (.beingDismissed, "Being Dismissed"),
-            (.pictureInPictureActive, "Picture In Picture Active"),
-            (.readyForDisplay, "Ready For Display"),
-        ]
-
-        var isBeingShown: Bool {
-            return !intersection([.pictureInPictureActive, .fullScreenActive]).isEmpty
-        }
-
-        var debugDescription: String {
-            var debugDescriptions = Status.descriptions
-                .filter { contains($0.0) }
-                .map { $0.1 }
-            if isEmpty {
-                debugDescriptions.append("Idle (Tap to full screen)")
-            } else if !contains(.readyForDisplay) {
-                debugDescriptions.append("NOT Ready For Display")
-            }
-            return debugDescriptions.joined(separator: "\n")
+    // Removes the playerViewController from its container, and updates the status accordingly.
+    func removeFromParentIfNeeded() {
+        if status.contains(.embeddedInline) {
+            playerViewControllerIfLoaded?.willMove(toParent: nil)
+            playerViewControllerIfLoaded?.view.removeFromSuperview()
+            playerViewControllerIfLoaded?.removeFromParent()
+            status.remove(.embeddedInline)
         }
     }
 }
 
 extension PlayerViewControllerCoordinator: AVPlayerViewControllerDelegate {
-    // 1a) Update the status when Picture in Picture playback is about to start.
-    func playerViewControllerWillStartPictureInPicture(_ playerViewController: AVPlayerViewController) {
-        status.insert(.pictureInPictureActive)
-    }
-
-    // 1b) Update the status when Picture in Picture playback fails to start.
-    func playerViewController(_ playerViewController: AVPlayerViewController, failedToStartPictureInPictureWithError error: Error) {
-        status.remove(.pictureInPictureActive)
-    }
-
-    // 1c) Update the status when Picture in Picture playback stops.
-    func playerViewControllerDidStopPictureInPicture(_ playerViewController: AVPlayerViewController) {
-        status.remove(.pictureInPictureActive)
-    }
-
     // 2a) Track the presentation of the player view controller's content.
     // Note that this may happen while the player view controller is embedded inline.
     func playerViewController(
@@ -220,20 +169,6 @@ extension PlayerViewControllerCoordinator: AVPlayerViewControllerDelegate {
             }
         }
     }
-
-    // 3) The most important delegate method for Picture in Picture--restoring the user interface.
-    // This implementation sends the callback to its own delegate view controller because the coordinator
-    // doesn't have enough global context to perform the restore operation.
-    func playerViewController(
-        _ playerViewController: AVPlayerViewController,
-        restoreUserInterfaceForPictureInPictureStopWithCompletionHandler completionHandler: @escaping (Bool) -> Void
-    ) {
-        if let delegate = delegate {
-            delegate.playerViewControllerCoordinator(self, restoreUIForPIPStop: completionHandler)
-        } else {
-            completionHandler(false)
-        }
-    }
 }
 
 extension PlayerViewControllerCoordinator {
@@ -242,6 +177,49 @@ extension PlayerViewControllerCoordinator {
             playerViewControllerIfLoaded = AVPlayerViewController()
         }
     }
+}
+
+extension PlayerViewControllerCoordinator {
+    // An OptionSet describing the various states the app tracks in the DebugHUD.
+    struct Status: OptionSet, CustomDebugStringConvertible {
+        let rawValue: Int
+
+        static let embeddedInline = Status(rawValue: 1 << 0)
+        static let fullScreenActive = Status(rawValue: 1 << 1)
+        static let beingPresented = Status(rawValue: 1 << 2)
+        static let beingDismissed = Status(rawValue: 1 << 3)
+        static let pictureInPictureActive = Status(rawValue: 1 << 4)
+        static let readyForDisplay = Status(rawValue: 1 << 5)
+
+        static let descriptions: [(Status, String)] = [
+            (.embeddedInline, "Embedded Inline"),
+            (.fullScreenActive, "Full Screen Active"),
+            (.beingPresented, "Being Presented"),
+            (.beingDismissed, "Being Dismissed"),
+            (.pictureInPictureActive, "Picture In Picture Active"),
+            (.readyForDisplay, "Ready For Display"),
+        ]
+
+        var isBeingShown: Bool {
+            return !intersection([.embeddedInline, .pictureInPictureActive, .fullScreenActive]).isEmpty
+        }
+
+        var debugDescription: String {
+            var debugDescriptions = Status.descriptions
+                .filter { contains($0.0) }
+                .map { $0.1 }
+            if isEmpty {
+                debugDescriptions.append("Idle (Tap to full screen)")
+            } else if !contains(.readyForDisplay) {
+                debugDescriptions.append("NOT Ready For Display")
+            }
+            return debugDescriptions.joined(separator: "\n")
+        }
+    }
+}
+
+protocol PlayerViewControllerCoordinatorDelegate: AnyObject {
+    func playerViewControllerCoordinatorWillDismiss(_ coordinator: PlayerViewControllerCoordinator)
 }
 
 private extension AVPlayerViewController {

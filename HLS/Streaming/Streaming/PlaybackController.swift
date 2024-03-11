@@ -10,8 +10,12 @@ import UIKit
 
 class PlaybackController {
     weak var videoItemDelegate: PlayerViewControllerCoordinatorDelegate?
-    let video = Video.sample
+    private let videos: [Video]
     private var playbackItems = [Video: PlayerViewControllerCoordinator]()
+
+    init(videos: [Video]) {
+        self.videos = videos
+    }
 
     func prepareForPlayback() {
         do {
@@ -21,11 +25,8 @@ class PlaybackController {
         }
     }
 
-    private func coordinatorOrNil(for indexPath: IndexPath) -> PlayerViewControllerCoordinator? {
-        return playbackItems[video]
-    }
-
-    func coordinator(video: Video) -> PlayerViewControllerCoordinator {
+    func coordinator(for indexPath: IndexPath) -> PlayerViewControllerCoordinator {
+        let video = videos[indexPath.row]
         if let playbackItem = playbackItems[video] {
             return playbackItem
         } else {
@@ -36,14 +37,15 @@ class PlaybackController {
         }
     }
 
-    func present(video: Video, from presentingViewController: UIViewController) {
-        coordinator(video: video).presentFullScreen(from: presentingViewController)
+    func indexPath(for coordinator: PlayerViewControllerCoordinator) -> IndexPath? {
+        if let index = videos.firstIndex(of: coordinator.video) {
+            return IndexPath(item: index, section: 0)
+        }
+        return nil
     }
 
-    func removeAllEmbeddedViewControllers() {
-//        playbackItems.forEach {
-//            $0.value.removeFromParentIfNeeded()
-//        }
+    func present(contentForIndexPath indexPath: IndexPath, from presentingViewController: UIViewController) {
+        coordinator(for: indexPath).presentFullScreen(from: presentingViewController)
     }
 
     func dismissActivePlayerViewController(animated: Bool, completion: @escaping () -> Void) {
